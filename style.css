@@ -1,0 +1,417 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@keyframes backgroundAnimation {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+body {
+  background-image: url('assets/image/cerah.jpg');
+  background-size: cover; /* Menutupi seluruh area */
+  background-position: center; /* Memusatkan gambar */
+  background-repeat: no-repeat; /* Tidak mengulang gambar */
+  animation: backgroundAnimation 10s ease infinite; /* Animasi bergerak */
+  
+}
+@keyframes backgroundAnimation {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+
+  .cta-button:hover {
+    background-color: #C70039; /* Warna merah saat hover */
+}
+
+  .cta-button {
+    background-color: #130f0f; /* Warna oranye cerah */
+    transition: background-color 0.3s ease; /* Animasi saat hover */
+} 
+  
+    background-color: rgba(255, 255, 255, 0.8); /* Warna putih transparan */
+}
+
+
+.hero {
+      animation: fadeIn 2s ease-in-out; /* Animasi masuk */
+  }
+
+  @keyframes fadeIn {
+      from {
+          opacity: 0;
+      }
+      to {
+          opacity: 1;
+      }
+  }
+
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  gap: 1rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.cta-button {
+  background-color: #007BFF;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+/* button */
+/* Tombol CTA dengan Animasi */
+.cta-button {
+  background-color: #007BFF; /* Warna tombol */
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Transisi untuk warna dan transformasi */
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.5); /* Bayangan untuk efek 3D */
+}
+
+.cta-button:hover {
+  background-color: #0056b3; /* Warna tombol saat hover */
+  transform: translateY(-3px) scale(1.05); /* Mengangkat tombol dan memperbesar */
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.7); /* Bayangan lebih dalam saat hover */
+}
+
+/* Animasi untuk tombol saat dimuat */
+@keyframes buttonLoad {
+  0% {
+      transform: scale(0.8);
+      opacity: 0;
+  }
+  50% {
+      opacity: 1;
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+.cta-button {
+  animation: buttonLoad 0.5s ease forwards; /* Animasi saat tombol dimuat */
+}
+
+/* Animasi untuk elemen saat dimuat */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Mengaplikasikan animasi pada elemen */
+.hero h1, .hero p, .features h2, .testimonials blockquote {
+    animation: fadeInUp 0.8s ease forwards; /* Animasi masuk */
+    opacity: 0; /* Mulai dari tidak terlihat */
+}
+
+/* Menambahkan animasi pada gambar di galeri */
+.gallery img {
+    transition: transform 0.3s ease, filter 0.3s ease; /* Transisi untuk efek hover */
+}
+
+.gallery img:hover {
+    transform: scale(1.1); /* Memperbesar gambar saat hover */
+    filter: brightness(1.1); /* Mencerahkan gambar saat hover */
+}
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background-color: #007BFF;
+  color: white;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+h1, h2, h3 {
+  animation: slideIn 1s ease forwards; /* Animasi teks masuk */
+  opacity: 0; /* Mulai dari tidak terlihat */
+}
+
+@keyframes slideIn {
+  from {
+      transform: translateY(-20px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+/* Features Section */
+.features {
+  padding: 2rem;
+  text-align: center;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature-item img {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+}
+
+.feature-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Testimonials Section */
+.testimonials {
+  padding: 2rem;
+  text-align: center;
+  background-color: #f8f8f8;
+}
+
+.testimonials blockquote {
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 2rem;
+  text-align: center;
+}
+
+.gallery img:hover {
+  transform: scale(1.1); /* Memperbesar gambar saat hover */
+}
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+/* FAQ Section */
+.faq {
+  padding: 2rem;
+  text-align: left;
+}
+
+.faq-item {
+  margin-bottom: 1rem;
+}
+
+.faq-item h3 {
+  cursor: pointer;
+}
+
+/* Contact Section */
+.contact {
+  padding: 2rem;
+  text-align: left;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact label {
+  margin-bottom: 0.5rem;
+}
+
+.contact input, .contact textarea {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+/* Footer */
+footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 2rem;
+  background-color: #333;
+  color: white;
+}
+
+.footer-column {
+  text-align: center;
+  opacity: 0; /* Mulai dari tidak terlihat */
+  animation: fadeInUp 0.8s ease forwards; /* Animasi masuk */
+  animation-delay: 0.3s; /* Delay untuk setiap kolom */
+}
+.footer-column:nth-child(1) { animation-delay: 0.1s; }
+.footer-column:nth-child(2) { animation-delay: 0.2s; }
+.footer-column:nth-child(3) { animation-delay: 0.3s; }
+.footer-column h3 {
+  margin-bottom: 1rem;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Animasi untuk form input */
+.registration input {
+    transition: border-color 0.3s ease; /* Transisi untuk border */
+}
+
+.registration input:focus {
+    border-color: #007BFF; /* Warna border saat fokus */
+    outline: none; /* Menghilangkan outline default */
+}
+.footer-copyright {
+  grid-column: span 3;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  header {
+      flex-direction: column; /* Stack items vertically on small screens */
+      align-items: flex-start;
+  }
+
+  nav ul {
+      flex-direction: column; /* Stack navigation items vertically */
+      width: 100%;
+  }
+
+  .hero h1 {
+      font-size: 2rem; /* Smaller font size for hero title */
+  }
+
+  .hero p {
+      font-size: 1rem; /* Smaller font size for hero paragraph */
+  }
+
+  .feature-item img {
+      width: 80px; /* Smaller images on mobile */
+      height: 80px;
+  }
+
+  .footer {
+      grid-template-columns: 1fr; /* Stack footer columns on small screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-button {
+      width: 100%; /* Full width buttons on small screens */
+  }
+
+  .contact input, .contact textarea {
+      font-size: 0.9rem; /* Smaller font size for inputs */
+  }
+}
+
+
+/* Styles for Registration Section */
+.registration {
+  padding: 2rem;
+  background-image: url('assets/image/cerah.jpg');
+  background-size: cover; /* Menutupi seluruh area */
+  background-position: center; /* Memusatkan gambar */
+  background-repeat: no-repeat; /* Tidak mengulang gambar */
+  animation: backgroundAnimation 10s ease infinite; /* Animasi bergerak */
+  
+  color: white; /* Warna teks */
+  text-align: center;
+  animation: fadeIn 1s ease; /* Animasi masuk */
+}
+
+.registration h2 {
+  margin-bottom: 1rem;
+}
+
+.registration form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.registration label {
+  margin-bottom: 0.5rem;
+}
+
+.registration input {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 5px;
+  width: 80%; /* Lebar input */
+}
+
+.registration .cta-button {
+  background-color: #007BFF; /* Warna tombol */
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.registration .cta-button:hover {
+  background-color: #0056b3; /* Warna tombol saat hover */
+}
+
+/* Animasi untuk elemen */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
